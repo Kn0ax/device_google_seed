@@ -116,4 +116,8 @@
         <item>LPPE_CP_TECHNOLOGY=0</item>
         <item>LPPE_UP_TECHNOLOGY=0</item>
     </string-array>
+
+    <!-- Whether device supports an alt. ambient display -->
+    <bool name="config_alt_ambient_display">true</bool>
+
 </resources>
