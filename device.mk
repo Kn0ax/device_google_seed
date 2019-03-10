@@ -16,7 +16,7 @@
 #
 
 # Inherit from msm8916-common
-$(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
+$(call inherit-product, device/google/msm8916-common/msm8916.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -42,6 +42,8 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
+TARGET_BOOT_ANIMATION_RES := 720
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
@@ -59,6 +61,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     libjni_livedisplay \
     pp_calib_data_booyi_OTM1287_720p_video_mode_dsi_panel.xml
+
+# Doze
+PRODUCT_PACKAGES += \
+    SeedDoze
 
 # GPS
 PRODUCT_PACKAGES += \

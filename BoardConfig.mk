@@ -18,7 +18,7 @@
 FORCE_32_BIT := true
 
 # Inherit from msm8916-common
-include device/cyanogen/msm8916-common/BoardConfigCommon.mk
+include device/google/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/google/seed
 
@@ -52,12 +52,12 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # Kernel
-BOARD_DTBTOOL_ARGS := -2
-BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_SEPARATED_DT := true
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := lineageos_seed_defconfig
+
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Power
 TARGET_HAS_NO_POWER_STATS := true
